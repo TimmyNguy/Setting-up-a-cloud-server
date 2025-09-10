@@ -29,6 +29,7 @@ This process helps us understand how cloud services work and prepares us to set 
 - I also configured **Free Tier usage alerts** in the AWS Billing Console.  
 
 ![MFA Setup](images/aws-mfa.png)
+![MFA Setup2](images/aws-mfa2.png)
 
 ---
 

@@ -39,6 +39,21 @@ This process helps us understand how cloud services work and prepares us to set 
 ### 🔹 Breakpoint 5 – Connecting to the Instance via SSH
 - Using the `.pem` key file, I opened a terminal on my local machine to establish a secure SSH session.  
 - I carefully followed AWS’s official instructions to adjust file permissions for the key and run the SSH command:  
-
-```bash
+``bash
 ssh -i "my-key.pem" ubuntu@<public-ip-address>
+- After running the command, I successfully logged into my EC2 instance’s terminal.
+- This confirmed that my VM was live, secure, and accessible from my local environment.
+## ✅ Conclusion
+In this lab, I learned how to deploy and manage a cloud-based virtual machine using AWS, which improved my understanding of **cloud infrastructure and security practices**.  
+
+Challenges I faced included:  
+- Navigating **IAM Identity Center** and setting permissions for non-root users.  
+- Setting up **secure SSH access** to the EC2 instance.  
+
+By carefully following the lab guide and AWS documentation, I resolved these challenges. These skills will be valuable for:  
+- Managing cloud servers  
+- Deploying secure applications  
+- Preparing for more advanced labs such as honeypot deployment  
+
+
+

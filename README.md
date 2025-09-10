@@ -18,29 +18,44 @@ This process helps us understand how cloud services work and prepares us to set 
 - I selected the **AWS Free Tier**, which provides limited resources like EC2 instances, S3 storage, and IAM access at no cost for one year.  
 - This step ensured I had the necessary access to cloud services for the lab without financial risk.  
 
+![AWS Signup](images/aws-signup.png)
+
+---
+
 ### 🔹 Breakpoint 2 – Securing the Root Account
 - I protected the AWS **root account** by setting up **Multi-Factor Authentication (MFA)** using the Duo Mobile app.  
 - After linking the QR code with my account, every login required approval on my phone, adding strong protection against unauthorized access.  
-- I also configured **Free Tier usage alerts** in the AWS Billing Console. This ensured that if I approached free tier limits, I would get an email warning before charges occurred.  
+- I also configured **Free Tier usage alerts** in the AWS Billing Console.  
+
+![MFA Setup](images/aws-mfa.png)
+
+---
 
 ### 🔹 Breakpoint 3 – Configuring IAM Users and Permissions
-- Instead of using the root account for daily operations, I created a **user group** and a dedicated **IAM Identity Center user**.  
-- I enabled **MFA** for this user to maintain strong security.  
-- Next, I created a **custom permission set** with the `AmazonEC2FullAccess` policy, giving the user full access to EC2 resources.  
-- I configured the session timeout to **4 hours**, limiting the time a user stays logged in to reduce potential risks.  
-- Finally, I assigned this permission set to my user group, ensuring all members could safely launch and manage EC2 instances without needing root privileges.  
+- Created a **user group** and a dedicated **IAM Identity Center user**.  
+- Enabled **MFA** for the new user.  
+- Created a **custom permission set** with the `AmazonEC2FullAccess` policy.  
+- Assigned this permission set to my user group.  
+
+![IAM Dashboard](images/aws-iam.png)
+
+---
 
 ### 🔹 Breakpoint 4 – Launching a Virtual Machine (EC2 Instance)
-- I launched an **EC2 instance** using the **Ubuntu Server 22.04 LTS** image, which is widely used for cloud deployments.  
-- For cost efficiency, I chose the **t2.micro** instance type, included in the AWS Free Tier.  
-- I created a new **RSA key pair** (in `.pem` format), which is essential for secure SSH connections.  
-- I downloaded the key to a safe location on my computer, since AWS only provides it once and it is required for authentication.  
+- Launched an **EC2 instance** using the **Ubuntu Server 22.04 LTS** image.  
+- Chose the **t2.micro** instance type (Free Tier).  
+- Created and downloaded a new **RSA key pair (.pem)** for SSH authentication.  
+
+![EC2 Launch](images/aws-ec2-launch.png)
+
+---
 
 ### 🔹 Breakpoint 5 – Connecting to the Instance via SSH
-- Using the `.pem` key file, I opened a terminal on my local machine to establish a secure SSH session.  
-- I carefully followed AWS’s official instructions to adjust file permissions for the key and run the SSH command:  
+- Used the `.pem` key file to connect via terminal with the SSH command:
+- I carefully followed AWS’s official instructions to adjust file permissions for the key and run the SSH command:
 ``bash
 ssh -i "my-key.pem" ubuntu@<public-ip-address>
+
 - After running the command, I successfully logged into my EC2 instance’s terminal.
 - This confirmed that my VM was live, secure, and accessible from my local environment.
 ## ✅ Conclusion

@@ -19,7 +19,7 @@ This process helps us understand how cloud services work and prepares us to set 
 - I selected the **AWS Free Tier**, which provides limited resources like EC2 instances, S3 storage, and IAM access at no cost for one year.  
 - This step ensured I had the necessary access to cloud services for the lab without financial risk.  
 
-![AWS Signup](<img width="624" height="322" alt="Picture1" src="https://github.com/user-attachments/assets/1fb313a5-46c1-45d5-acc6-1f7cf177c6f4" />)
+![AWS Signup](images/aws-signup.png)
 
 ---
 

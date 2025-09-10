@@ -40,6 +40,7 @@ This process helps us understand how cloud services work and prepares us to set 
 - Assigned this permission set to my user group.  
 
 ![IAM Dashboard](images/aws-iam.png)
+![IAM Dashboard](images/aws-iam2.png)
 
 ---
 
